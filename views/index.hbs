@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>APi test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <h2>Taha Elkarroumy : <a href="https://www.linkedin.com/in/taha-elkarroumy-95ab641b9/">LinkedIn</a> </h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+         <th scope="col">#</th>
+         <th scope="col">Methode</th>
+         <th scope="col">endpoint</th>
+         <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+         <th scope="row">1</th>
+           <td>GET</td>
+           <td>{{hostname}}/api/product/</td>
+           <td>List des produits</td>
+
+          </tr>
+          <tr>
+           <th scope="row">2</th>
+           <td>POST	</td>
+           <td>{{hostname}}/api/product/</td>
+           <td>Ajout de produit</td>
+         </tr>
+
+         <tr>
+          <th scope="row">3</th>
+          <td>DELETE	</td>
+          <td>{{hostname}}/product/{:product_id}</td>
+          <td>Suppression de produit
+</td>
+        </tr>
+
+          <tr>
+           <th scope="row">4</th>
+           <td>PATCH	</td>
+           <td>{{hostname}}/product/{:product_id}</td>
+           <td>Mise à jour de produit</td>
+         </tr>
+
+         <tr>
+          <th scope="row">5</th>
+          <td>GET	</td>
+          <td>{{hostname}}/product/{:product_id}/variants/</td>
+          <td>List des variantes d'un produit {product_id}</td>
+        </tr>
+
+        <tr>
+         <th scope="row">6</th>
+         <td>GET	</td>
+         <td>{{hostname}}/product/{:product_id}/variants/{:variant_id}</td>
+         <td>List de la variante {variant_id} du produit {product_id}</td>
+       </tr>
+
+       <tr>
+        <th scope="row">7</th>
+        <td>GET	</td>
+        <td>{{hostname}}/product/{:product_id}</td>
+        <td>List du produit {product_id}</td>
+      </tr>
+          </tbody>
+    </table>
+     <p>TEST API  : <a href="https://reqbin.com/">Reqbin</a> </p>
+    <kbd>APi key : AHES6ZRVmB7fkLtd1</kbd>
+  </body>
+</html>
