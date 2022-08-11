@@ -44,13 +44,18 @@ router.get('/product', (req,res)=>{
 
 // POST	/product/	Ajout de produit
 router.post('/product',(req,res)=>{
-  console.log(req.body);
+  console.log(req.body.variants);
   let p = new Product(req.body)
+  let variants = Variant.create(req.body.variants,function(err,v){
+      if (err) return res.json(err)
+      p.variants = v
+  })
   p.save(function(err,doc){
     if (err) return res.json(err)
     return res.status(201).json(doc)
   })
 })
+
 
 // DELETE	/product/{:product_id}	Suppression de produit
 router.delete('/product/:product_id', (req,res)=>{
